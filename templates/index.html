@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Guided hackathon journey</p>
+          <h1>Build your hackathon plan with a stunning guided flow</h1>
+          <p class="hero-text">
+            Create an account, log in, explore companies, discover events, and stay on top of the calendar — all with a polished UI.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="/step1">Get started</a>
+            <a class="btn secondary" href="/dashboard">Open dashboard</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>What makes it special</h3>
+          <ul>
+            <li>Clean onboarding with a clear step-by-step flow</li>
+            <li>Smart search and filters for companies and hackathons</li>
+            <li>Fast calendar view for planning your next event</li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading">
+            <h2>Companies conducting hackathons</h2>
+            <p>Browse the companies hosting upcoming events and their locations.</p>
+          </div>
+          <div class="card-grid" id="companyGrid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>Find a hackathon</h2>
+            <p>Search by company, date, or location to discover the best events.</p>
+          </div>
+          <div class="toolbar">
+            <input id="companySearch" type="text" placeholder="Search companies, dates or locations" />
+            <select id="companyFilter">
+              <option value="all">All companies</option>
+            </select>
+            <select id="dateFilter">
+              <option value="all">All dates</option>
+            </select>
+            <select id="locationFilter">
+              <option value="all">All locations</option>
+            </select>
+          </div>
+          <div class="notification-panel" id="notificationPanel"></div>
+          <div class="card-grid" id="hackathonGrid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>Hackathon calendar</h2>
+            <p>View upcoming events grouped by date for easier planning.</p>
+          </div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+        </section>
+
+        <div class="panel">
+          <div class="section-heading">
+            <h2>Quick navigation</h2>
+            <p>Open any step directly if you want to follow the guided flow.</p>
+          </div>
+          <div class="nav-links">
+            <a class="btn primary" href="/step1">Step 1 - Sign up</a>
+            <a class="btn secondary" href="/step2">Step 2 - Login</a>
+            <a class="btn secondary" href="/step3">Step 3 - Companies</a>
+            <a class="btn secondary" href="/step4">Step 4 - Find</a>
+            <a class="btn secondary" href="/step5">Step 5 - Calendar</a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

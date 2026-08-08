@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 1 - Sign Up</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="step-panel" style="padding-bottom: 20px;">
+        <div class="steps-bar">
+          <span class="step-pill active">Step 1</span>
+          <span class="step-pill">Step 2</span>
+          <span class="step-pill">Step 3</span>
+          <span class="step-pill">Step 4</span>
+          <span class="step-pill">Step 5</span>
+        </div>
+        <div class="section-heading">
+          <h1>Step 1 - Sign up</h1>
+          <p>Create your account to unlock the full guided experience.</p>
+        </div>
+        <form id="signupForm" class="auth-form">
+          <input id="signupName" type="text" placeholder="Your name" required />
+          <input id="signupEmail" type="email" placeholder="Email address" required />
+          <input id="signupPassword" type="password" placeholder="Password" required />
+          <button class="btn primary" type="submit">Create account</button>
+          <div id="signupError" class="auth-error"></div>
+        </form>
+        <div id="authMessage" class="auth-message">Please create your account to continue.</div>
+        <div class="nav-links">
+          <a class="btn secondary small" href="/step2">Next step</a>
+        </div>
+      </div>
+    </div>
+    <script src="/static/auth.js"></script>
+  </body>
+</html>
