@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head><title>Register</title></head>
-<body>
-<h2>Register</h2>
-<form action="/register" method="POST">
-    <input name="name" placeholder="Name" required><br><br>
-    <input name="email" type="email" placeholder="Email" required><br><br>
-    <input name="password" type="password" placeholder="Password" required><br><br>
-    <button>Register</button>
-</form>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Hackathon Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell auth-page">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Join the hackathon tracker</p>
+          <h1>Create your account</h1>
+          <p class="hero-text">Sign up quickly to access a sleek workflow for discovering companies, filtering events, and planning your next hackathon.</p>
+          <div class="hero-actions">
+            <a class="btn secondary" href="/">Back home</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Fast account setup</h3>
+          <ul>
+            <li>Save your progress across steps</li>
+            <li>Stay organized with clear page goals</li>
+            <li>Unlock event search and calendar tools</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel form-panel" style="margin-top: 24px;">
+        <h2>Sign up</h2>
+        <p>Become part of the guided hackathon experience.</p>
+        <form id="signupForm" class="auth-form">
+          <input id="signupName" type="text" placeholder="Your name" required />
+          <input id="signupEmail" type="email" placeholder="Email address" required />
+          <input id="signupPassword" type="password" placeholder="Password" required />
+          <button class="btn primary" type="submit">Create account</button>
+          <div id="signupError" class="auth-error"></div>
+        </form>
+        <p class="switch-link">Already have an account? <a href="/login">Login</a></p>
+      </div>
+    </div>
+    <script src="/static/auth.js"></script>
+  </body>
 </html>
