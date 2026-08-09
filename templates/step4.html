@@ -1,45 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Step 4 - Find a Hackathon</title>
-    <link rel="stylesheet" href="/static/styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <div class="step-panel" style="padding-bottom: 20px;">
-        <div class="steps-bar">
-          <span class="step-pill done">Step 1</span>
-          <span class="step-pill done">Step 2</span>
-          <span class="step-pill done">Step 3</span>
-          <span class="step-pill active">Step 4</span>
-          <span class="step-pill">Step 5</span>
-        </div>
-        <div class="section-heading">
-          <h1>Step 4 - Find a hackathon</h1>
-          <p>Use the search bar and filters to find a company by name, date, or location.</p>
-        </div>
-        <div class="toolbar">
-          <input id="companySearch" type="text" placeholder="Search company name" />
-          <select id="companyFilter">
-            <option value="all">All companies</option>
-          </select>
-          <select id="dateFilter">
-            <option value="all">All dates</option>
-          </select>
-          <select id="locationFilter">
-            <option value="all">All locations</option>
-          </select>
-        </div>
-        <div class="notification-panel" id="notificationPanel"></div>
-        <div class="card-grid" id="hackathonGrid"></div>
-        <div class="nav-links">
-          <a class="btn secondary small" href="/step3">Previous</a>
-          <a class="btn primary small" href="/step5">Next step</a>
-        </div>
-      </div>
-    </div>
-    <script src="/static/app.js"></script>
-  </body>
-</html>
+<h1>Step 4 - Find Hackathon 🔍</h1>
+<form method="GET">
+<input type="text" name="q" placeholder="Search by city or company" value="{{ query }}">
+<button>Search</button>
+</form>
+{% for r in results %}
+<p><b>{{ r[1] }}</b> by {{ r[2] }} on {{ r[3] }} at {{ r[4] }}</p>
+{% endfor %}
+<a href="/dashboard">Back</a>
