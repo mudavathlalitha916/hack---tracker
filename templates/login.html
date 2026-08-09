@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head><title>Login</title></head>
-<body>
-<h2>Login</h2>
-
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <p style="color:red">{{ messages[0] }}</p>
-  {% endif %}
-{% endwith %}
-
-<form action="/api/login" method="POST">
-    <input name="email" type="email" placeholder="Email" required><br><br>
-    <input name="password" type="password" placeholder="Password" required><br><br>
-    <button>Login</button>
-</form>
-<p>Account ledu? <a href="/register">Register here</a></p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Hackathon Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell auth-page">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h1>Login to continue</h1>
+          <p class="hero-text">Return to your hackathon plan and keep exploring companies, events, and calendar matchups.</p>
+          <div class="hero-actions">
+            <a class="btn secondary" href="/">Back home</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Quick return flow</h3>
+          <ul>
+            <li>Access saved search and filter state</li>
+            <li>Refresh the dashboard instantly</li>
+            <li>Pick up where you left off</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel form-panel" style="margin-top: 24px;">
+        <h2>Login</h2>
+        <p>Enter your credentials to continue the experience.</p>
+        <form id="loginForm" class="auth-form">
+          <input id="loginEmail" type="email" placeholder="Email address" required />
+          <input id="loginPassword" type="password" placeholder="Password" required />
+          <button class="btn primary" type="submit">Login</button>
+          <div id="loginError" class="auth-error" aria-live="polite"></div>
+        </form>
+        <p class="switch-link">New here? <a href="/signup">Create an account</a></p>
+      </div>
+    </div>
+    <script src="/static/auth.js"></script>
+  </body>
 </html>
