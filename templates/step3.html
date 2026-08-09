@@ -1,3 +1,44 @@
-<h1>Step 3 - Companies 🗓️</h1>
-<ul>{% for c in companies %}<li>{{ c }}</li>{% endfor %}</ul>
-<a href="/dashboard">Back</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 3 - Companies</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="step-panel" style="padding-bottom: 20px;">
+        <div class="steps-bar">
+          <span class="step-pill done">Step 1</span>
+          <span class="step-pill done">Step 2</span>
+          <span class="step-pill active">Step 3</span>
+          <span class="step-pill">Step 4</span>
+          <span class="step-pill">Step 5</span>
+        </div>
+        <div class="section-heading">
+          <h1>Step 3 - Companies conducting hackathons</h1>
+          <p>Browse the companies behind upcoming events and their host locations.</p>
+        </div>
+        <div class="toolbar">
+          <input id="companySearch" type="text" placeholder="Search companies, dates or locations" />
+          <select id="companyFilter">
+            <option value="all">All companies</option>
+          </select>
+          <select id="dateFilter">
+            <option value="all">All dates</option>
+          </select>
+          <select id="locationFilter">
+            <option value="all">All locations</option>
+          </select>
+        </div>
+        <div class="card-grid" id="companyGrid"></div>
+        <div class="nav-links">
+          <a class="btn secondary small" href="/step2">Previous</a>
+          <a class="btn primary small" href="/step4">Next step</a>
+        </div>
+      </div>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
