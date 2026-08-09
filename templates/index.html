@@ -1,3 +1,35 @@
-<a href="/step3">Step 3 - Companies</a>
-<a href="/step4">Step 4 - Find</a>
-<a href="/step5">Step 5 - Calendar</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hack Tracker - Find Hackathons</title>
+    <style>
+        body { margin:0; font-family: Arial; background: #f0f2f5; }
+       .navbar { background: #2563eb; padding: 15px 50px; color: white; display: flex; justify-content: space-between; align-items: center; }
+       .navbar a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+       .hero { text-align: center; padding: 100px 20px; background: white; }
+       .hero h1 { font-size: 48px; color: #2563eb; }
+       .btn { padding: 14px 30px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; margin: 10px; }
+       .steps { display: flex; justify-content: center; gap: 30px; padding: 60px 20px; flex-wrap: wrap; }
+       .card { background: white; padding: 30px; border-radius: 12px; width: 250px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <b style="font-size:20px">Hack Tracker 🚀</b>
+        <div>
+            <a href="/step2">Sign In</a>
+            <a href="/register">Register</a>
+        </div>
+    </div>
+    <div class="hero">
+        <h1>Find Your Next Hackathon</h1>
+        <p>Track companies, find events, and manage calendar - All in one place</p>
+        <a href="/register" class="btn">Get Started Free</a>
+    </div>
+    <div class="steps">
+        <div class="card"><h3>Step 3</h3><p>Browse Companies</p><a href="/step3">View</a></div>
+        <div class="card"><h3>Step 4</h3><p>Find by Location</p><a href="/step4">Search</a></div>
+        <div class="card"><h3>Step 5</h3><p>Event Calendar</p><a href="/step5">Check Dates</a></div>
+    </div>
+</body>
+</html>
