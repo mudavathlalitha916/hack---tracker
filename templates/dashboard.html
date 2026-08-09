@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-<html>
-<head><title>Dashboard</title>
-<style>
-body{font-family:Arial;padding:30px;background:#f0f2f5}
-.navbar{background:#2563eb;padding:15px;color:white;display:flex;justify-content:space-between}
-.card{background:white;padding:20px;margin:15px;border-radius:10px;box-shadow:0 2px 5px gray}
-a{text-decoration:none;color:#2563eb;font-weight:bold}
-</style>
-</head>
-<body>
-<div class="navbar">
-    <b>Welcome {{ name }}!</b>
-    <a href="/logout" style="color:white">Logout</a>
-</div>
-<h2>Your Dashboard</h2>
-<div class="card"><h3><a href="/step3">Step 3 - Companies </a></h3><p>See all companies hosting hackathons</p></div>
-<div class="card"><h3><a href="/step4">Step 4 - Find </a></h3><p>Search hackathons by city or company</p></div>
-<div class="card"><h3><a href="/step5">Step 5 - Calendar </a></h3><p>View all upcoming hackathon dates</p></div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Hackathon Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero compact-hero" style="padding: 32px;">
+        <div>
+          <p class="eyebrow">Personalized hackathon hub</p>
+          <h1>Explore companies, dates, and locations</h1>
+          <p class="hero-text">Search for events, view the calendar, and filter by your preferences all from one polished dashboard.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="/">Home</a>
+            <a class="btn secondary" href="/login">Logout</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Dashboard highlights</h3>
+          <ul>
+            <li>Instant access to event and company data</li>
+            <li>Smart filters for fast discovery</li>
+            <li>Calendar view for easy planning</li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading">
+            <h2>Companies conducting hackathons</h2>
+            <p>Browse the companies hosting upcoming events.</p>
+          </div>
+          <div class="card-grid" id="companyGrid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>Find a hackathon</h2>
+            <p>Use the search bar and filters to find a company by name, date, or location.</p>
+          </div>
+          <div class="toolbar">
+            <input id="companySearch" type="text" placeholder="Search company name" />
+            <select id="companyFilter">
+              <option value="all">All companies</option>
+            </select>
+            <select id="dateFilter">
+              <option value="all">All dates</option>
+            </select>
+            <select id="locationFilter">
+              <option value="all">All locations</option>
+            </select>
+          </div>
+          <div class="card-grid" id="hackathonGrid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>Hackathon calendar</h2>
+            <p>See the upcoming events in date order.</p>
+          </div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
 </html>
